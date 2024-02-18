@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: 3336fc19fb1109a44b89d44cf3bbab78
+  m_CachedHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 500
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 3c106bde27da9f543826a76557a7112e, type: 2}
+  - {fileID: 11400000, guid: 6babb3869643b9a4f996ed79f5d2dc2d, type: 2}
+  - {fileID: 11400000, guid: 24f03536eb1e46447928877907721581, type: 2}
+  - {fileID: 11400000, guid: ed179f427adecee419dfa887b805e6de, type: 2}
+  - {fileID: 11400000, guid: d20c2e67dd1a1074087d624f71727b5f, type: 2}
+  - {fileID: 11400000, guid: 089fd32ee37fd3b438e377b617674f7e, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: d805ddb6a0c8f5b409229942da55befa
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: fadf180928dd0384d8c0cce63ec30514
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: e5d210545dc059f469288a414cbab157
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 0bae2b05dbe31bc4f8b99afc48ac7425
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 2023daaf1c6a95044a0730423d62c237
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 8c1aff2aca5ce7240897ec8b65a17f65
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    m_ProfileEntryNames:
+    - m_Id: fadf180928dd0384d8c0cce63ec30514
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: e5d210545dc059f469288a414cbab157
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 0bae2b05dbe31bc4f8b99afc48ac7425
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 2023daaf1c6a95044a0730423d62c237
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 8c1aff2aca5ce7240897ec8b65a17f65
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 0da182709c7a3cd45b01359690f69d16, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: dd1ba8fd17f577b449f7919265110790, type: 2}
+  - {fileID: 11400000, guid: e226d841f46baf34da81f2b70891b1ba, type: 2}
+  - {fileID: 11400000, guid: b83379ea46491c249854284663ce4219, type: 2}
+  - {fileID: 11400000, guid: 205ba34c79c26844c8a07e8098df77f3, type: 2}
+  m_ActiveProfileId: d805ddb6a0c8f5b409229942da55befa
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
