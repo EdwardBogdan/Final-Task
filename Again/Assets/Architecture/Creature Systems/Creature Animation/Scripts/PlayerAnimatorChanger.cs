@@ -7,17 +7,19 @@ namespace CreatureAnimation.Player
         [SerializeField] private Animator _animator;
         private void Awake()
         {
-            //PlayerAnimationManager.ListenChangeController(OnChangeAnimator, true);
+            PlayerAnimationManager.ListenChangeController(OnChangeAnimator, true);
 
-            //_animator.runtimeAnimatorController = PlayerAnimationManager.CurrentAnimator;
-        }
+            _animator.runtimeAnimatorController = PlayerAnimationManager.AnimatorController;
+
+            PlayerAnimationManager.SetAnimator(_animator);
+    }
 
         private void OnChangeAnimator(RuntimeAnimatorController controller)
         {
             bool isGround = _animator.GetBool(AnimatorKeys.Key_IsGrounded);
             bool isWalled = _animator.GetBool(AnimatorKeys.Key_IsWalled);
 
-            _animator.runtimeAnimatorController = PlayerAnimationManager.CurrentAnimator;
+            _animator.runtimeAnimatorController = PlayerAnimationManager.AnimatorController;
 
             _animator.SetBool(AnimatorKeys.Key_IsGrounded, isGround);
             _animator.SetBool(AnimatorKeys.Key_IsWalled, isWalled);

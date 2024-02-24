@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d1fe8fc883b2f459e1d36523aa8902, type: 3}
+  m_Name: InputManager
+  m_EditorClassIdentifier: 
+  linkPrefab: {fileID: -5570088117293361965, guid: e6905a5ddd6bd94499d4dd88d437bf49, type: 3}
+  _keys: {fileID: 11400000, guid: 81138d193caa3f946b4f74169a96cb3e, type: 2}
+  _currentMap: 2
+  _storedMap: 2
+  _onMapChanged:
+    m_PersistentCalls:
+      m_Calls: []

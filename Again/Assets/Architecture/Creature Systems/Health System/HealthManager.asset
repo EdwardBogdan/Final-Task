@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkPrefab: {fileID: 2071172669437638385, guid: 228231b9838291048b28f3a6d106eb50, type: 3}
   _health:
-    _value: 41
-    _stored: 41
-    _valueMax: 99
-    _storedMax: 99
+    _value: 82
+    _stored: 82
+    _valueMax: 82
+    _storedMax: 82
     _events:
       OnCountChanged:
         m_PersistentCalls:

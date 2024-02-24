@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ItemDef Potion Green
   m_EditorClassIdentifier: 
   _id: Potion Green
+  _type: 1
   _icon: {fileID: 21300000, guid: a9668fb145985c141bf05f932b68dade, type: 3}
   _prefSlot: 2

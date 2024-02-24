@@ -12,20 +12,7 @@ namespace SpawnSystem.Components
 
         public GameObject GetSpawnedObject()
         {
-            GameObject prefab = Instantiate(_prefab, transform.position, transform.rotation);
-
-            if (_useScale)
-            {
-                prefab.transform.localScale = Vector3.Scale(transform.lossyScale, _prefab.transform.localScale);
-            }
-
-            if (_spawnInside)
-            {
-                prefab.transform.SetParent(transform);
-            }
-
-            return prefab;
-        
+            return Spawning.Spawn(_prefab, transform, _useScale, _spawnInside);
         }
 
         public void SpawnObject()

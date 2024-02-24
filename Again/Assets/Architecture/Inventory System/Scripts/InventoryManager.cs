@@ -12,9 +12,7 @@ namespace InventorySystem
     {
         #region Controller Refs
         [SerializeField] private SelectItemManager _itemController;
-        [SerializeField] private WeaponManager _weaponController;
         internal static SelectItemManager ItemManager => I._itemController;
-        internal static WeaponManager WeaponManager => I._weaponController;
         #endregion
 
         #region Item List
@@ -98,6 +96,14 @@ namespace InventorySystem
         private static void Init()
         {
             InitializeSystem(AddressableKey);
+        }
+        #endregion
+
+        #region ContextMenu
+        [ContextMenu("Clear List")]
+        public void ClearList()
+        {
+            items = new();
         }
         #endregion
     }

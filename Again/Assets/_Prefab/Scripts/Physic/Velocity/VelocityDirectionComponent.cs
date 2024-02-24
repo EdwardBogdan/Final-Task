@@ -28,7 +28,7 @@ namespace PhysicCustom.Components
 
         #region Editor
 #if UNITY_EDITOR
-
+        [SerializeField] private bool _showGizmos = true;
         [SerializeField] private Color _gizmosColor = Color.yellow;
         public Vector2 StartPointEditor { get => transform.position;}
         public Vector2 FinishPointEditor { get => GetGlobalPos(_direction); set => _direction = GetLocalPos(value); }
@@ -57,6 +57,8 @@ namespace PhysicCustom.Components
 
         private void OnDrawGizmosSelected()
         {
+            if (!_showGizmos) return;
+
             Gizmos.color = _gizmosColor;
 
             Vector2 direction = FinishPointEditor - StartPointEditor;

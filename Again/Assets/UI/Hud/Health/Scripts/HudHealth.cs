@@ -1,4 +1,5 @@
 using Creature.Player;
+using Creature.Player.PlayerInit;
 using GameSystem.Screen;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -18,8 +19,8 @@ namespace UI.Hud.Health
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Initialize()
         {
-            PlayerInitializer.OnPlayerCreated += OnCreateHud;
-            PlayerInitializer.OnPlayerDestroyed += OnDestroyHud;
+            PlayerInitManager.OnPlayerCreated += OnCreateHud;
+            PlayerInitManager.OnPlayerDestroyed += OnDestroyHud;
         }
         private static void OnCreateHud()
         {

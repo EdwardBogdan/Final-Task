@@ -2,6 +2,40 @@
     "name": "Configuration",
     "maps": [
         {
+            "name": "Empty",
+            "id": "47b90b5a-e28f-4ccc-a6f0-dde96c53e835",
+            "actions": [],
+            "bindings": []
+        },
+        {
+            "name": "Menu",
+            "id": "d20bdfe8-898b-44da-8846-d88bb92a848f",
+            "actions": [
+                {
+                    "name": "ESC",
+                    "type": "Button",
+                    "id": "f7b8a890-2d63-40f6-87fb-99dcb5ba2042",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6dde0e81-a900-460a-a431-e863db53a901",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ESC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Player Controll",
             "id": "2a538e15-e869-48dc-ab0f-02fedce31a07",
             "actions": [
@@ -240,7 +274,7 @@
                 {
                     "name": "",
                     "id": "0a0d86b9-826d-43d0-88f2-cd505045f1bf",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -262,7 +296,7 @@
             ]
         },
         {
-            "name": "Dialog Menu",
+            "name": "Dialog",
             "id": "383521bb-4e3d-4878-8355-92f884c8b900",
             "actions": [
                 {
@@ -288,12 +322,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Menu",
-            "id": "d20bdfe8-898b-44da-8846-d88bb92a848f",
-            "actions": [],
-            "bindings": []
         }
     ],
     "controlSchemes": []

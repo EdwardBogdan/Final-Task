@@ -11,6 +11,11 @@ namespace InventorySystem
         public static ItemUnit SelectedItem => I._selectedItem;
         private static SelectItemManager I => InventoryManager.ItemManager;
 
+        public static void UseItem()
+        {
+            SelectedItem?.Property.OnUsed(SelectedItem);
+        }
+
         public static void SelectItem(int index)
         {
             // Проверка на валидность индекса
@@ -23,10 +28,9 @@ namespace InventorySystem
         public static void SelectItem(ItemUnit item)
         {
             // Если уже есть выбранный элемент, снимаем с него выделение
-            var currentItem = SelectedItem;
-            if (currentItem != null)
+            if (SelectedItem != null)
             {
-                currentItem.GeneralProperty(GeneralPropertyType.Deselected);
+                SelectedItem.GeneralProperty(GeneralPropertyType.Deselected);
             }
 
             I._selectedItem = item;
@@ -50,6 +54,11 @@ namespace InventorySystem
                 if (itemCount > 0) SelectItem(0);
                 else I._selectedItem = null;
             }
+        }
+
+        private void OnEnable()
+        {
+            SelectItem(0);
         }
     }
 }

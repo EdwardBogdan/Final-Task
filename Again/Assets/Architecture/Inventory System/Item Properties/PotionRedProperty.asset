@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16131911219f6a942b171bcfeedc9dd8, type: 3}
   m_Name: PotionRedProperty
   m_EditorClassIdentifier: 
-  _events:
-    _onTakedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onRemovedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _OnUsedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onSelectedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onDeselectedEvent:
-      m_PersistentCalls:
-        m_Calls: []
+  _consumption: 1
+  _useCooldown:
+    _duration: 5
+  _onUsedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f705853036cea4a409370e1d0c1f0a52, type: 2}
+        m_TargetAssemblyTypeName: HealthSystem.PlayerHealthManager, Assembly-CSharp
+        m_MethodName: ChangeHealth
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

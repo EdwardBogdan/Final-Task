@@ -25,6 +25,26 @@ MonoBehaviour:
     m_Address: InventoryManager
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2767d7e5e8af3bd4696e1913c815099d
+    m_Address: InputManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6d8b80e34e1de347a95bb65257ca0f1
+    m_Address: AnimatorManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0fa0edb5357fb9c4ea391fdfe39bfe79
+    m_Address: PlayerRefManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2dbfc8dfc26c5bb4fae7c5236fdf5bf7
+    m_Address: PlayerInitManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11508bc04514a104a95111691a1f8fdd
+    m_Address: WeaponManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: cf5a3459ceca36b4db868ba54a119380, type: 2}
   m_SchemaSet:

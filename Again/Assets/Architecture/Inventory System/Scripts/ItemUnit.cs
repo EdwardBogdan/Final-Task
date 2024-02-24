@@ -9,11 +9,8 @@ namespace InventorySystem
     [CreateAssetMenu(menuName = "Inventory/Items/Unit", fileName = "Item Unit")]
     public class ItemUnit : ScriptableObject
     {
-        [SerializeField] private ItemType _type;
         [SerializeField] private ItemDef _def;
         [SerializeField] private ItemProperty _itemPropertry;
-
-        public ItemType Type => _type;
         public ItemDef Def => _def;
         public ItemProperty Property => _itemPropertry;
 
@@ -63,13 +60,6 @@ namespace InventorySystem
         {
             if (mode) _count.OnMaxChanged.AddListener(func);
             else _count.OnMaxChanged.RemoveListener(func);
-        }
-
-        //For UnityEvent
-        public void OnCountChanged(int value, int oldValue)
-        {
-            if (oldValue == 0) InventoryManager.AddItem(this);
-            else if (value == 0) InventoryManager.RemoveItem(this);
         }
         #endregion
 
@@ -133,13 +123,26 @@ namespace InventorySystem
         }
         #endregion
 
-        #region Editor
+        #region Mono
 #if UNITY_EDITOR
         private void OnValidate()
         {
             _count.Validate();
         }
 #endif
+        private void OnEnable()
+        {
+            _count.OnCountChanged.AddListener(OnCountChanged);
+        }
+        private void OnDisable()
+        {
+            _count.OnCountChanged.RemoveListener(OnCountChanged);
+        }
+        private void OnCountChanged(int value, int oldValue)
+        {
+            if (oldValue == 0) InventoryManager.AddItem(this);
+            else if (value == 0) InventoryManager.RemoveItem(this);
+        }
         #endregion
     }
 }

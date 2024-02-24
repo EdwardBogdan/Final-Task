@@ -308,7 +308,7 @@ MonoBehaviour:
             m_StringArgument: Dust
             m_BoolArgument: 0
           m_CallState: 2
-  - _yVelocity: 5
+  - _yVelocity: 10
     _event:
       m_PersistentCalls:
         m_Calls:
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 5341595506353446849}
   m_Layer: 7
   m_Name: Barrel Simple
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,52 +838,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2faab52170d6c4f9e951fad097601b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health:
+    _value: 5
+    _stored: 5
+    _valueMax: 5
+    _storedMax: 5
+    _events:
+      OnCountChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      OnMaxChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      OnHit:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1486810485361961192}
+            m_TargetAssemblyTypeName: ScriptAnimation.ScriptSmartAnimator, Assembly-CSharp
+            m_MethodName: SetClip
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: Hit
+              m_BoolArgument: 0
+            m_CallState: 2
+      OnHeal:
+        m_PersistentCalls:
+          m_Calls: []
+      OnDeath:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1486810485361961192}
+            m_TargetAssemblyTypeName: ScriptAnimation.ScriptSmartAnimator, Assembly-CSharp
+            m_MethodName: SetClip
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: Dead
+              m_BoolArgument: 0
+            m_CallState: 2
   _immortal: 1
   _immunityCd:
     _duration: 0.2
-  _health:
-    _value: 5
-    OnChanged:
-      m_PersistentCalls:
-        m_Calls: []
-  _maxHealth:
-    _value: 5
-    OnChanged:
-      m_PersistentCalls:
-        m_Calls: []
-  _onTakeHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1486810485361961192}
-        m_TargetAssemblyTypeName: ScriptAnimation.ScriptSmartAnimator, Assembly-CSharp
-        m_MethodName: SetClip
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Hit
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onTakeHeal:
-    m_PersistentCalls:
-      m_Calls: []
-  _onDead:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1486810485361961192}
-        m_TargetAssemblyTypeName: ScriptAnimation.ScriptSmartAnimator, Assembly-CSharp
-        m_MethodName: SetClip
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Dead
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5341595506353446849
 MonoBehaviour:
   m_ObjectHideFlags: 0

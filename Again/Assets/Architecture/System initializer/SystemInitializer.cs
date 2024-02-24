@@ -82,9 +82,11 @@ namespace GameSystem.Initialization
         {
             overallProgress += singleSystemWeight;
 
-            OnPercentChanged?.Invoke(overallProgress);
+            int progress = Mathf.RoundToInt(overallProgress);
 
-            Debug.Log($"{unit.SystemName}: Successful! Init progress: {overallProgress}%");
+            OnPercentChanged?.Invoke(progress);
+
+            Debug.Log($"{unit.SystemName}: Successful! Init progress: {progress}%");
         }
         #endregion
     }

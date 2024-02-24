@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
-  m_Name: Item Units_ContentUpdateGroupSchema
+  m_Script: {fileID: 11500000, guid: 55314e98bac92f743b3f14878174f04f, type: 3}
+  m_Name: PlayerRefManager
   m_EditorClassIdentifier: 
-  m_Group: {fileID: 11400000, guid: d20c2e67dd1a1074087d624f71727b5f, type: 2}
-  m_StaticContent: 0
+  linkPrefab: {fileID: 332627791202353458, guid: df4331b291938b64b8fe9e135234dfaf, type: 3}
+  _playerGO: {fileID: 0}
+  _spawnArea: {fileID: 0}

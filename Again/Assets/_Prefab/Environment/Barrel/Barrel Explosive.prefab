@@ -90,7 +90,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _color: {r: 1, g: 0.00000023841858, b: 0, a: 0.19607843}
-  _tag: 
+  _tags: []
   _useByCombinator: 0
   _tagFilter: 0
   _position: {x: 0, y: 0}

@@ -12,19 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af8bf0d5008ab146be791068cf92af4, type: 3}
   m_Name: KeyProperty
   m_EditorClassIdentifier: 
-  _events:
-    _onTakedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onRemovedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _OnUsedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onSelectedEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    _onDeselectedEvent:
-      m_PersistentCalls:
-        m_Calls: []
+  _consumption: 1
+  _useCooldown:
+    _duration: 0.5
+  _onUsedEvent:
+    m_PersistentCalls:
+      m_Calls: []

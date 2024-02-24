@@ -12,29 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89636c79891e914d87024ab18a8ad81, type: 3}
   m_Name: Item Unit Potion Red
   m_EditorClassIdentifier: 
-  _type: 1
   _def: {fileID: 11400000, guid: de7d84befa0c5c245be3f6f558ceda0d, type: 2}
   _itemPropertry: {fileID: 11400000, guid: 54688c98006c5354ba313246a9dc3ea6, type: 2}
   _count:
-    _value: 10
+    _value: 9
     _maxValue: 10
-    _stored: 10
+    _stored: 9
     _storedMax: 10
     OnCountChanged:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000}
-          m_TargetAssemblyTypeName: GameSystem.InventorySystem.ItemUnit, Assembly-CSharp
-          m_MethodName: OnCountChanged
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
+        m_Calls: []
     OnMaxChanged:
       m_PersistentCalls:
         m_Calls: []

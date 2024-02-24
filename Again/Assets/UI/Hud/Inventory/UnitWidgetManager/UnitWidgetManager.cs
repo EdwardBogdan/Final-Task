@@ -1,10 +1,9 @@
 using InventorySystem;
 using System;
 using System.Collections.Generic;
-using UI.Hud.Inventory;
 using UnityEngine;
 
-namespace UI.Hud.Items
+namespace UI.Hud.Inventory
 {
     public class UnitWidgetManager : MonoBehaviour
     {

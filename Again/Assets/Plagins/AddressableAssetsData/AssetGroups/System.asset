@@ -21,10 +21,6 @@ MonoBehaviour:
     m_Address: AudioManager
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: d6d8b80e34e1de347a95bb65257ca0f1
-    m_Address: AnimatorManager
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: cf5a3459ceca36b4db868ba54a119380, type: 2}
   m_SchemaSet:

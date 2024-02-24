@@ -8,7 +8,7 @@ namespace Property.TimeProperty
     {
         [SerializeField, Min(0.01f)] private float _duration;
 
-        private float _timesUp;
+        private float _timesUp = 0;
 
         public bool IsReady => _timesUp <= Time.time;
         public float Duration => _duration;

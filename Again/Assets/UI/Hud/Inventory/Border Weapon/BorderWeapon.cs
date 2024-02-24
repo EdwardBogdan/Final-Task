@@ -1,4 +1,4 @@
-using InventorySystem;
+using Creature.Player.Arming;
 using UnityEngine;
 
 namespace UI.Hud.Inventory
@@ -7,27 +7,20 @@ namespace UI.Hud.Inventory
     {
         private void Awake()
         {
-            WeaponManager.ListenWeaponAdded(OnWeaponAdded, true);
-            WeaponManager.ListenNoWeapon(OnNoWeapon, true);
+            WeaponManager.ListenChange(OnChange, true);
         }
         private void Start()
         {
-            if (WeaponManager.EquipedWeapon == null) gameObject.SetActive(false);
+            OnChange(WeaponManager.Armed);
         }
-
         private void OnDestroy()
         {
-            WeaponManager.ListenWeaponAdded(OnWeaponAdded, false);
-            WeaponManager.ListenNoWeapon(OnNoWeapon, false);
+            WeaponManager.ListenChange(OnChange, false);
         }
 
-        private void OnWeaponAdded(ItemUnit item)
+        private void OnChange(bool value)
         {
-            gameObject.SetActive(true);
-        }
-        private void OnNoWeapon(ItemUnit item)
-        {
-            gameObject.SetActive(false);
+            gameObject.SetActive(value);
         }
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using GameSystem.Screen;
-using Creature.Player;
+using Creature.Player.PlayerInit;
 
 namespace UI.Hud.Inventory
 {
@@ -18,8 +18,8 @@ namespace UI.Hud.Inventory
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Initialize()
         {
-            PlayerInitializer.OnPlayerCreated += OnCreateHud;
-            PlayerInitializer.OnPlayerDestroyed += OnDestroyHud;
+            PlayerInitManager.OnPlayerCreated += OnCreateHud;
+            PlayerInitManager.OnPlayerDestroyed += OnDestroyHud;
         }
         private static void OnCreateHud()
         {

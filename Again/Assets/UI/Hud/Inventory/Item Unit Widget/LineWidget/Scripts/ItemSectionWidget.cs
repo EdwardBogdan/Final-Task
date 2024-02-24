@@ -1,10 +1,11 @@
+using InventorySystem;
 using Property.ObservableRangeProperty;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace UI.Hud.Inventory
 {
-    public class LineSectionWidget : MonoBehaviour
+    public class ItemSectionWidget : MonoBehaviour
     {
         [SerializeField] private SectionWidget sectionPrefab;
         [SerializeField] private IntObsRangeProperty _currentSectionCount;
@@ -12,32 +13,44 @@ namespace UI.Hud.Inventory
 
         private List<SectionWidget> line = new();
 
-        private void Awake()
-        {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                GameObject foo = transform.GetChild(i).gameObject;
+        private ItemUnit storedItemUnit;
 
-                if (foo.TryGetComponent<SectionWidget>(out var section))
-                {
-                    line.Add(section);
-                }
-            }
-        }
-        internal int SectionCount
+        public void OnSetItem(ItemUnit item)
         {
-            get => _currentSectionCount.Value;
-            set => _currentSectionCount.Value = value;
+            Subscribe(false);
+
+            storedItemUnit = item;
+
+            Subscribe(true);
+
+            _maxSectionCount.Value = storedItemUnit.MaxCount;
+
+            _currentSectionCount.MaxRange = _maxSectionCount.Value;
+
+            _currentSectionCount.Value = storedItemUnit.Count;
         }
-        internal int SectionMaxCount
+
+        #region Subscribe
+        private void Subscribe(bool value)
         {
-            get => _maxSectionCount.Value;
-            set
-            {
-                _maxSectionCount.Value = value;
-                _currentSectionCount.MaxRange = _maxSectionCount.Value;
-            }
+            if (storedItemUnit == null) return;
+
+            storedItemUnit.ListenCountEvent(OnChargesChanged, value);
+            storedItemUnit.ListenMaxCountEvent(OnMaxChargesChanged, value);
         }
+        private void OnChargesChanged(int value, int oldValue)
+        {
+            if (value != storedItemUnit.Count) return; // <= FUCKING CRUTCH, FIND WAY TO FIX IT
+
+            _currentSectionCount.Value = storedItemUnit.Count;
+        }
+        private void OnMaxChargesChanged(int value, int oldValue)
+        {
+            _maxSectionCount.Value = value;
+            _currentSectionCount.MaxRange = _maxSectionCount.Value;
+        }
+        
+        #endregion
 
         #region Unity Events
         public void OnSetCurrentSectionCount(int value, int oldValue)
@@ -80,6 +93,19 @@ namespace UI.Hud.Inventory
         }
         #endregion
 
+        #region Mono
+        private void Awake()
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                GameObject foo = transform.GetChild(i).gameObject;
+
+                if (foo.TryGetComponent<SectionWidget>(out var section))
+                {
+                    line.Add(section);
+                }
+            }
+        }
 #if UNITY_EDITOR
         private void OnValidate()
         {
@@ -88,5 +114,10 @@ namespace UI.Hud.Inventory
             _currentSectionCount.Validate();
         }
 #endif
+        private void OnDestroy()
+        {
+            Subscribe(false);
+        }
+        #endregion
     }
 }

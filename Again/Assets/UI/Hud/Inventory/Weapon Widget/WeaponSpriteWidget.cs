@@ -1,4 +1,6 @@
+using Creature.Player.Arming;
 using InventorySystem;
+using InventorySystem.ItemProperies;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,22 +8,21 @@ namespace UI.Hud.Inventory
 {
     public class WeaponSpriteWidget : MonoBehaviour
     {
-        [SerializeField] private Image _spirte;
         private void Awake()
         {
-            WeaponManager.ListenWeaponChanged(OnWeaponChanged, true);
+            WeaponManager.ListenArming(OnArming, true, true);
 
-            if (WeaponManager.EquipedWeapon != null) OnWeaponChanged(WeaponManager.EquipedWeapon);
+            if (WeaponManager.Armed) OnArming();
         }
 
         private void OnDestroy()
         {
-            WeaponManager.ListenWeaponChanged(OnWeaponChanged, false);
+            //OldWeaponManager.ListenWeaponChanged(OnWeaponChanged, false);
         }
 
-        private void OnWeaponChanged(ItemUnit item)
+        private void OnArming()
         {
-            _spirte.sprite = WeaponManager.EquipedWeapon.Def.Icon;
+            //_spirte.sprite = OldWeaponManager.EquipedWeapon.Def.Icon;
         }
     }
 }
