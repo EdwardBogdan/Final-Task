@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81810501311893186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65,16 +65,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _color: {r: 1, g: 0, b: 0.010779858, a: 0.105882354}
-  _tags:
-  - Enemy
-  - Barrel
+  _tags: []
   _useByCombinator: 0
-  _tagFilter: 1
+  _tagFilter: 0
   _position: {x: 0, y: 0}
   _layer:
     serializedVersion: 2
     m_Bits: 384
-  _checkRadius: 0.5
+  _checkRadius: 0.4
 --- !u!114 &81810501311893190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +222,53 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &2731733754010917374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881617306837432442}
+  - component: {fileID: 3124024596256584557}
+  m_Layer: 8
+  m_Name: Heal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881617306837432442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731733754010917374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6953308383545498163}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3124024596256584557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731733754010917374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1693f46101bb4da3e0b67903b7689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnInside: 0
+  _useScale: 0
+  _prefab: {fileID: 2461093754569719424, guid: 1ece25d451369ca4994619d3c385cf8e, type: 3}
 --- !u!1 &6953308381570642932
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +283,7 @@ GameObject:
   - component: {fileID: 6953308381570642928}
   - component: {fileID: 6953308381570642943}
   - component: {fileID: 3193693637462371825}
+  - component: {fileID: 6288291957969937565}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -299,7 +345,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -951793731
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: de7a54b1419ac4c4c9dd56dc44a7916f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -345,47 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3c833a31bb19c4db71b70cb72d9d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventRefs:
-  - _key: Trigger Attack
-    _event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6953308381570642930}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Attack
-            m_BoolArgument: 0
-          m_CallState: 2
-  - _key: Trigger Throw
-    _event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6953308381570642930}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Throw
-            m_BoolArgument: 0
-          m_CallState: 2
-  - _key: Throw Event
-    _event:
-      m_PersistentCalls:
-        m_Calls: []
-  - _key: Attack Cast
-    _event:
-      m_PersistentCalls:
-        m_Calls: []
+  _eventRefs: []
   _eventStringRefs:
   - _key: Sound
     _event:
@@ -447,6 +453,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 6953308381570642930}
+--- !u!114 &6288291957969937565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953308381570642932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c55f7e8229c98418e604cb09beea13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6953308381570642930}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Attack
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6953308381730525948
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +740,7 @@ GameObject:
   - component: {fileID: 6953308382165516330}
   - component: {fileID: 7404696621883329960}
   - component: {fileID: 6953308382165516328}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: '#Player'
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -827,7 +860,19 @@ MonoBehaviour:
           m_CallState: 2
     OnHeal:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 3124024596256584557}
+          m_TargetAssemblyTypeName: SpawnSystem.Components.SpawnPoint, Assembly-CSharp
+          m_MethodName: SpawnObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnDeath:
       m_PersistentCalls:
         m_Calls: []
@@ -1150,6 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerGO: {fileID: 6953308382165516333}
   _spawnArea: {fileID: 6953308382113890343}
+  _animator: {fileID: 6953308381570642930}
 --- !u!1 &6953308382567566066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1760,7 @@ Transform:
   - {fileID: 6953308382567566065}
   - {fileID: 6953308382644081965}
   - {fileID: 6953308382717231793}
+  - {fileID: 5881617306837432442}
   m_Father: {fileID: 6953308382165516331}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

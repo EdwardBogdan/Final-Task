@@ -19,7 +19,7 @@ TagManager:
   - Box
   - Creature
   - Interactable
-  - 
+  - Player
   - 
   - 
   - 
@@ -47,6 +47,12 @@ TagManager:
     locked: 0
   - name: Backside
     uniqueID: 1176433391
+    locked: 0
+  - name: Partical
+    uniqueID: 1171054131
+    locked: 0
+  - name: Items
+    uniqueID: 1549253183
     locked: 0
   - name: Creature
     uniqueID: 3343173565

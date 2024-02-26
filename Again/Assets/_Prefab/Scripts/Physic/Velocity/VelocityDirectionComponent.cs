@@ -23,7 +23,9 @@ namespace PhysicCustom.Components
 
             if(_resetVelocity) body.velocity = new(0, 0);
 
-            body.AddForce(new(_direction.x * velocity, _direction.y * velocity), ForceMode2D.Impulse);
+            Vector3 scale = transform.lossyScale;
+
+            body.AddForce(new((_direction.x * velocity) / scale.x, (_direction.y * velocity) / scale.y), ForceMode2D.Impulse);
         }
 
         #region Editor

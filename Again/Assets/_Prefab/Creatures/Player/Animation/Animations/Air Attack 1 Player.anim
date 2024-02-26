@@ -74,21 +74,7 @@ AnimationClip:
   m_Events:
   - time: 0
     functionName: InvokeStringEvent
-    data: Spawn, Air Attack 1
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: InvokeStringEvent
     data: Sound, Melee
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: InvokeEvent
-    data: Attack Cast
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

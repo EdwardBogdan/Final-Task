@@ -1,3 +1,4 @@
+using Creature.Player.Ref;
 using GameSystem.General;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,15 +8,10 @@ namespace CreatureAnimation.Player
     [CreateAssetMenu(fileName = "PlayerAnimationManager", menuName = "Player/Animation/Manager")]
     public class PlayerAnimationManager : SystemOrigin<PlayerAnimationManager>
     {
-        [SerializeField, EditorAttributes.EditorReadOnly] private Animator _playerAnimator;
         [SerializeField, EditorAttributes.EditorReadOnly] private RuntimeAnimatorController _animatorController;
 
         internal static RuntimeAnimatorController AnimatorController => I._animatorController;
 
-        public void SetTrigger(string name)
-        {
-            _playerAnimator?.SetTrigger(name);
-        }
         public void SetAnimatoController(RuntimeAnimatorController controller)
         {
             _animatorController = controller;
@@ -25,9 +21,10 @@ namespace CreatureAnimation.Player
             UnityEditor.EditorUtility.SetDirty(this);
 #endif
         }
-        internal static void SetAnimator(Animator animator)
+
+        public void SetTrigger(string name)
         {
-            I._playerAnimator = animator;
+            PlayerRefManager.Animator.SetTrigger(name);
         }
 
         #region Event

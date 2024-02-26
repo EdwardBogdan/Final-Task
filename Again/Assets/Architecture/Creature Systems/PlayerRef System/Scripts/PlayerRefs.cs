@@ -6,6 +6,7 @@ namespace Creature.Player.Ref
     {
         [SerializeField] private GameObject _playerGO;
         [SerializeField] private Transform _spawnArea;
+        [SerializeField] private Animator _animator;
 
         private void Awake()
         {
@@ -17,6 +18,7 @@ namespace Creature.Player.Ref
 
             PlayerRefManager.Player = _playerGO;
             PlayerRefManager.SpawnArea = _spawnArea;
+            PlayerRefManager.Animator = _animator;
         }
     }
 }

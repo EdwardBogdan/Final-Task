@@ -21,7 +21,8 @@ namespace HealthSystem
         }
         public void ChangeHealth(int value)
         {
-            _health.Value += value;
+            if (value > 0) _health.ApplyHeal(value);
+            else if (value < 0) _health.ApplyDamage(value);
         }
         public void ChangeMaxHealth(int value)
         {

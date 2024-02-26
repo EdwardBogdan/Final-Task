@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &428996821154666159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 15501756a39d2a744b61c1d4870415bd, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b28db446a12c274f955622ca913c98a, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 775ba06a7d589f04a91e9aed3a4e74e7, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: dc57467f15bf80a47b7b4bc94a6e923c, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: ceb4629140794494a9f4091857b87daa, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d7e462d144fd6f408b3568ddfb2f2ce, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 42d5cd9bbf906154ba35735c95ac5f61, type: 3}
+    - target: {fileID: 1138364999376725712, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _sprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: e9b87255ecd87734b8b9a866faadddd4, type: 3}
+    - target: {fileID: 4284031005834337266, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af6511d78f4f2b1459b1f91a1456d2b7, type: 3}
+    - target: {fileID: 5348648860562360048, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 4470197857816062490, guid: 28da8b0bdf965fa4f9738bc9f4d7c8af, type: 3}
+    - target: {fileID: 5374137285172758824, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_Name
+      value: Prefab Treasure Coin Skull
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374137285172758869, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504204145742376150, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _unit
+      value: 
+      objectReference: {fileID: 11400000, guid: 5de0c314520d8924695b313421e3d43f, type: 2}
+    - target: {fileID: 8504204145742376150, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}
+      propertyPath: _count
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d150247f7fe7d47a26eafdbc615ba9, type: 3}

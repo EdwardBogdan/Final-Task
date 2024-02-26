@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkPrefab: {fileID: -5570088117293361965, guid: e6905a5ddd6bd94499d4dd88d437bf49, type: 3}
   _keys: {fileID: 11400000, guid: 81138d193caa3f946b4f74169a96cb3e, type: 2}
-  _currentMap: 2
-  _storedMap: 2
-  _onMapChanged:
-    m_PersistentCalls:
-      m_Calls: []
+  _inputMap:
+    _currentMap: 2
+    _storedMap: 2
+    _onMapChanged:
+      m_PersistentCalls:
+        m_Calls: []

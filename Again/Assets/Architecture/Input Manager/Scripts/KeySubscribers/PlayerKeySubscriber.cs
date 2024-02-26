@@ -1,4 +1,4 @@
-using Creature.Player.Arming;
+using Creature.Player.Weapon;
 using InputControll.KeyReaders;
 using InventorySystem;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace InputControll.KeySubscriber
             PlayerKeyReader.SelectItemCallback += SelectItemManager.SelectItem;
             PlayerKeyReader.UseItemCallback += SelectItemManager.UseItem;
             PlayerKeyReader.InteractCallback += _interactCast.Cast;
-            PlayerKeyReader.AttackCallback += WeaponManager.Attack;
+            PlayerKeyReader.AttackCallback += AttackManager.Attack;
         }
 
         public void OnUnsub()
@@ -24,7 +24,7 @@ namespace InputControll.KeySubscriber
             PlayerKeyReader.SelectItemCallback -= SelectItemManager.SelectItem;
             PlayerKeyReader.UseItemCallback -= SelectItemManager.UseItem;
             PlayerKeyReader.InteractCallback -= _interactCast.Cast;
-            PlayerKeyReader.AttackCallback -= WeaponManager.Attack;
+            PlayerKeyReader.AttackCallback -= AttackManager.Attack;
         }
     }
 }

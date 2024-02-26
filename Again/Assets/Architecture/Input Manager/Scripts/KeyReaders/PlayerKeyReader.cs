@@ -44,8 +44,7 @@ namespace InputControll.KeyReaders
         {
             if (context.started)
             {
-                if (Creature.Player.Arming.WeaponManager.Armed) 
-                    AttackCallback?.Invoke();
+                AttackCallback?.Invoke();
             }
         }
         #endregion

@@ -10,8 +10,6 @@ namespace CreatureAnimation.Player
             PlayerAnimationManager.ListenChangeController(OnChangeAnimator, true);
 
             _animator.runtimeAnimatorController = PlayerAnimationManager.AnimatorController;
-
-            PlayerAnimationManager.SetAnimator(_animator);
     }
 
         private void OnChangeAnimator(RuntimeAnimatorController controller)

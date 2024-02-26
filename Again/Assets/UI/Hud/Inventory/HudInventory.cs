@@ -37,7 +37,7 @@ namespace UI.Hud.Inventory
                 }
                 else
                 {
-                    Debug.LogError($"Failed to load window prefab from {AddressableKey}.");
+                    Debug.LogError($"Failed to load window prefab by key: {AddressableKey}.");
                 }
             };
         }

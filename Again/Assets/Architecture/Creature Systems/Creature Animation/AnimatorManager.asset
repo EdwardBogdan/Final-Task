@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: AnimatorManager
   m_EditorClassIdentifier: 
   linkPrefab: {fileID: 6033849181305954540, guid: 50b2b3c99a0c9d0458f36efc87483898, type: 3}
-  _playerAnimator: {fileID: 0}
-  _animatorController: {fileID: 22100000, guid: 8e0a9ca7d815dba4cad36f4577fcd704, type: 2}
+  _animatorController: {fileID: 9100000, guid: b2b1a814bcea5bd48834e2265d0fe4e7, type: 2}
   OnAnimatorChanged:
     m_PersistentCalls:
       m_Calls: []

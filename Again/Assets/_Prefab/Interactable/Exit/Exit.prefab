@@ -11,13 +11,10 @@ GameObject:
   - component: {fileID: 4433495075504810536}
   - component: {fileID: 4433495075504810537}
   - component: {fileID: 4433495075504810542}
-  - component: {fileID: 4433495075504810538}
-  - component: {fileID: 4433495075504810539}
   - component: {fileID: 636803241742590158}
-  - component: {fileID: 6369890026434797559}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Exit
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3881137133256620121}
+  - {fileID: 2344504501428658989}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,7 +118,7 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6369890026434797559}
+        - m_Target: {fileID: 5138289194628735427}
           m_TargetAssemblyTypeName: UI.Windows.SceneTransition.SceneTransitionController,
             Assembly-CSharp
           m_MethodName: TransitionScene
@@ -177,13 +175,107 @@ MonoBehaviour:
             m_StringArgument: Idle
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &4433495075504810538
+--- !u!114 &636803241742590158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4433495075504810543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0b548da7b55c449b7c2b5050f439fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binName: '#Interactable'
+  _object: {fileID: 4433495075504810543}
+--- !u!1 &6843612964001336362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2344504501428658989}
+  - component: {fileID: 591319093651356453}
+  - component: {fileID: 5138289194628735427}
+  - component: {fileID: 6468566359520008539}
+  m_Layer: 9
+  m_Name: Interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2344504501428658989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843612964001336362}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4433495075504810536}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &591319093651356453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843612964001336362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &5138289194628735427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843612964001336362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ecfca7342ec9f4084f1dcb8b37ec31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windowName: Window Scene Transition
+  _sceneName: Test
+  _beforeChangeScene:
+    m_PersistentCalls:
+      m_Calls: []
+  _panel1: {r: 1, g: 0.6903944, b: 0, a: 1}
+  _panel2: {r: 0.47685468, g: 1, b: 0, a: 1}
+  _text: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &6468566359520008539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843612964001336362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9746f2b1d5157524398d4ed556eb3486, type: 3}
@@ -193,7 +285,7 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4433495075504810538}
+      - m_Target: {fileID: 6468566359520008539}
         m_TargetAssemblyTypeName: Interactable.InteractableComponent, Assembly-CSharp
         m_MethodName: SetStatus
         m_Mode: 6
@@ -217,66 +309,6 @@ MonoBehaviour:
           m_StringArgument: Open Start
           m_BoolArgument: 0
         m_CallState: 2
---- !u!61 &4433495075504810539
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4433495075504810543}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &636803241742590158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4433495075504810543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0b548da7b55c449b7c2b5050f439fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _binName: '#Interactable'
-  _object: {fileID: 4433495075504810543}
---- !u!114 &6369890026434797559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4433495075504810543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ecfca7342ec9f4084f1dcb8b37ec31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _windowName: Window Scene Transition
-  _sceneName: Test
-  _beforeChangeScene:
-    m_PersistentCalls:
-      m_Calls: []
-  _panel1: {r: 1, g: 0.6903944, b: 0, a: 1}
-  _panel2: {r: 0.47685468, g: 1, b: 0, a: 1}
-  _text: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &7673560446074720436
 GameObject:
   m_ObjectHideFlags: 0

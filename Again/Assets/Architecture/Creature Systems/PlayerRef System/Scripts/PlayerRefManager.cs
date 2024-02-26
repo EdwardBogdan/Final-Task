@@ -8,6 +8,7 @@ namespace Creature.Player.Ref
     {
         [SerializeField, EditorAttributes.EditorReadOnly] private GameObject _playerGO;
         [SerializeField, EditorAttributes.EditorReadOnly] private Transform _spawnArea;
+        [SerializeField, EditorAttributes.EditorReadOnly] private Animator _animator;
 
         public static GameObject Player
         { 
@@ -17,12 +18,22 @@ namespace Creature.Player.Ref
                 I._playerGO = value; 
             } 
         }
+
         public static Transform SpawnArea
         {
             get => I._spawnArea;
             internal set
             {
                 I._spawnArea = value;
+            }
+        }
+
+        public static Animator Animator
+        {
+            get => I._animator;
+            internal set
+            {
+                I._animator = value;
             }
         }
 

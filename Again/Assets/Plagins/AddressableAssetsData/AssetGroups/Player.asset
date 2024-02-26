@@ -25,10 +25,6 @@ MonoBehaviour:
     m_Address: InventoryManager
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 2767d7e5e8af3bd4696e1913c815099d
-    m_Address: InputManager
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: d6d8b80e34e1de347a95bb65257ca0f1
     m_Address: AnimatorManager
     m_ReadOnly: 0
@@ -43,6 +39,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 11508bc04514a104a95111691a1f8fdd
     m_Address: WeaponManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c5995925e3d9b434aaa1baf3f1bd10e5
+    m_Address: TreasureManager
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

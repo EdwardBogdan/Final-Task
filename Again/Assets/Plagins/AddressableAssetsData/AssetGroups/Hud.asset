@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Hud Health
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bc271e6f90c6479429609568c8a85724
+    m_Address: Hud Treasure
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: cf5a3459ceca36b4db868ba54a119380, type: 2}
   m_SchemaSet:
