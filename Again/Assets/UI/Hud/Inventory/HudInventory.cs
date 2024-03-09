@@ -1,55 +1,39 @@
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using GameSystem.Screen;
 using Creature.Player.PlayerInit;
+using GameSystem.Overlay;
 
 namespace UI.Hud.Inventory
 {
-    public class HudInventory : MonoBehaviour
+    public class HudInventory : UnitUI
     {
         #region Init
-        private static bool loaded = false;
-
-        private static GameObject instance;
-
-        private const string AddressableKey = "Hud Inventory";
+        private static HudInventory instance;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Initialize()
         {
+            const string AddressableKey = "Hud Inventory";
+
             PlayerInitManager.OnPlayerCreated += OnCreateHud;
             PlayerInitManager.OnPlayerDestroyed += OnDestroyHud;
-        }
-        private static void OnCreateHud()
-        {
-            if (loaded) return;
 
-            loaded = true;
-
-            Addressables.LoadAssetAsync<GameObject>(AddressableKey).Completed += asset =>
+            static void OnCreateHud()
             {
-                if (asset.Status == AsyncOperationStatus.Succeeded)
-                {
-                    GameObject gameObject = asset.Result;
+                UILoader.LoadUI<HudInventory>(AddressableKey, OnLoaded);
 
-                    instance = Instantiate(gameObject, ScreenManager.OverlayCanvas.transform);
-                }
-                else
+                static void OnLoaded(HudInventory value)
                 {
-                    Debug.LogError($"Failed to load window prefab by key: {AddressableKey}.");
+                    instance = value;
                 }
-            };
+            }
+
+            static void OnDestroyHud()
+            {
+                if (instance == null) return;
+
+                Destroy(instance.gameObject);
+            }
         }
-
-        private static void OnDestroyHud()
-        {
-            if (instance == null) return;
-
-            Destroy(instance);
-
-            loaded = false;
-    }
         #endregion
     }
 }

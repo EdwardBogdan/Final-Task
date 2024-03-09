@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7500354862424053215}
   - component: {fileID: 7500354862424053213}
+  - component: {fileID: 6133885701979283648}
   m_Layer: 0
   m_Name: Hud - Inventory
   m_TagString: Untagged
@@ -50,6 +51,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c51c0588b3d4014a9a2c6675554338b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6133885701979283648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500354862424053214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad599c92c6d43a04da3f5cae571ef3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mapTrigger: 2
+  _onMapSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7500354862424053214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _onMapDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7500354862424053214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7910693592615702168
 GameObject:
   m_ObjectHideFlags: 0

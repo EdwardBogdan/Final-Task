@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Localization
 {
@@ -15,6 +16,8 @@ namespace Localization
         [SerializeField, EditorAttributes.EditorReadOnly] private LocaleDef _localeDef;
 
         [SerializeField] internal UnityEvent<LocaleDef> OnChanged = new();
+
+        
 
         internal LocaleDef Def => _localeDef;
         internal Language Value
@@ -32,11 +35,27 @@ namespace Localization
             }
         }
 
+        #region Load Def
+        private AsyncOperationHandle<LocaleDef> loading;
+
         private void ChangeDef(Language localeKey)
         {
+            if (loading.IsValid())
+            {
+                Addressables.Release(loading);
+                loading = default;
+            }
+
             string key = $"{localeKey}".First().ToString().ToUpper() + $"{localeKey}".Substring(1);
-            _localeDef = Addressables.LoadAssetAsync<LocaleDef>(key).Result;
+            loading = Addressables.LoadAssetAsync<LocaleDef>(key);
+
+            loading.Completed += handle =>
+            {
+                _localeDef = handle.Result;
+                loading = default;
+            };
         }
+        #endregion
 
 #if UNITY_EDITOR
         public void Validate()

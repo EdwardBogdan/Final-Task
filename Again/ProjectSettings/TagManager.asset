@@ -48,6 +48,9 @@ TagManager:
   - name: Backside
     uniqueID: 1176433391
     locked: 0
+  - name: Trash
+    uniqueID: 1392993219
+    locked: 0
   - name: Partical
     uniqueID: 1171054131
     locked: 0

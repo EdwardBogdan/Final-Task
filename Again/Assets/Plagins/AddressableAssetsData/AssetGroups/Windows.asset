@@ -18,7 +18,11 @@ MonoBehaviour:
   m_GUID: 71f1e0ab6297fde47b23466bfcb1bfe3
   m_SerializeEntries:
   - m_GUID: 39d0c1ed447b6cd459316d205b8e622a
-    m_Address: Window Scene Transition
+    m_Address: Scene Transition
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e4ad47d0ea168794097be70dfeced043
+    m_Address: Dialog UI
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

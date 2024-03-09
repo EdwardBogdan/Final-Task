@@ -17,7 +17,7 @@ namespace GameCore.Init
         private static void InitializationSystem()
         {
 #if UNITY_EDITOR
-            Scene activeScene = SceneManager.GetActiveScene();
+            Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
             string sceneName = activeScene.name;
 
@@ -31,14 +31,14 @@ namespace GameCore.Init
                 {
                     obj.SetActive(false);
                 }
-            } 
+            }
 #endif
-            SceneManager.LoadScene(InitSceneName);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(InitSceneName);
         }
 
         private void Start()
         {
-            AsyncOperation op = SceneManager.LoadSceneAsync(_sceneToLoad);
+            AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(_sceneToLoad);
             op.allowSceneActivation = false;
             
             StartCoroutine(Waiter(op));

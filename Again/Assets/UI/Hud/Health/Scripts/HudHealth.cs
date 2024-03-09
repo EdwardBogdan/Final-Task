@@ -1,54 +1,38 @@
-using Creature.Player;
 using Creature.Player.PlayerInit;
-using GameSystem.Screen;
+using GameSystem.Overlay;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace UI.Hud.Health
 {
-    public class HudHealth : MonoBehaviour
+    public class HudHealth : UnitUI
     {
         #region Init
-        private static bool loaded = false;
-
-        private static GameObject instance;
-
-        private const string AddressableKey = "Hud Health";
+        private static HudHealth instance;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Initialize()
         {
+            const string AddressableKey = "Hud Health";
+
             PlayerInitManager.OnPlayerCreated += OnCreateHud;
             PlayerInitManager.OnPlayerDestroyed += OnDestroyHud;
-        }
-        private static void OnCreateHud()
-        {
-            if (loaded) return;
 
-            loaded = true;
-
-            Addressables.LoadAssetAsync<GameObject>(AddressableKey).Completed += asset =>
+            static void OnCreateHud()
             {
-                if (asset.Status == AsyncOperationStatus.Succeeded)
+                UILoader.LoadUI<HudHealth>(AddressableKey, OnLoaded);
+
+                static void OnLoaded(HudHealth value)
                 {
-                    GameObject gameObject = asset.Result;
-
-                    instance = Instantiate(gameObject, ScreenManager.OverlayCanvas.transform);
+                    instance = value;
                 }
-                else
-                {
-                    Debug.LogError($"Failed to load window prefab for {AddressableKey}.");
-                }
-            };
-        }
-        private static void OnDestroyHud()
-        {
-            if (instance == null) return;
+            }
 
-            Destroy(instance);
+            static void OnDestroyHud()
+            {
+                if (instance == null) return;
 
-            loaded = false;
+                Destroy(instance.gameObject);
+            }
         }
         #endregion
     }

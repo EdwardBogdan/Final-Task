@@ -9,7 +9,7 @@ namespace InputControll
     {
         [SerializeField] private InputMap _currentMap;
         [SerializeField, HideInInspector] private InputMap _storedMap;
-        [SerializeField] private UnityEvent _onMapChanged = new();
+        [SerializeField] private UnityEvent<InputMap, InputMap> _onMapChanged = new();
         internal InputMap Map
         {
             get => _currentMap;
@@ -17,12 +17,14 @@ namespace InputControll
             {
                 if (value.Equals(_storedMap)) return;
 
+                var oldMap = _currentMap;
+
                 _currentMap = _storedMap = value;
-                _onMapChanged?.Invoke();
+                _onMapChanged?.Invoke(value, oldMap);
             }
         }
 
-        public void ListenChangeMap(UnityAction action, bool subscribe)
+        internal void ListenChangeMap(UnityAction<InputMap, InputMap> action, bool subscribe)
         {
             if (subscribe) _onMapChanged.AddListener(action);
             else _onMapChanged.RemoveListener(action);

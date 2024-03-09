@@ -15,9 +15,9 @@ MonoBehaviour:
   _def: {fileID: 11400000, guid: c0278eac545fa924fa491b5d0ae44804, type: 2}
   _itemPropertry: {fileID: 11400000, guid: 6461c3d56c42133418b32630e3523a92, type: 2}
   _count:
-    _value: 0
+    _value: 1
     _maxValue: 10
-    _stored: 0
+    _stored: 1
     _storedMax: 10
     OnCountChanged:
       m_PersistentCalls:

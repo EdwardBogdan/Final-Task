@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3447953407704813737}
   - component: {fileID: 226625676010318113}
+  - component: {fileID: 4700938445617547897}
   m_Layer: 0
   m_Name: Hud - Health
   m_TagString: Untagged
@@ -126,6 +127,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e185bc66c5c62cd46b9a1fcedee4d7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4700938445617547897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447953407704813750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad599c92c6d43a04da3f5cae571ef3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mapTrigger: 2
+  _onMapSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3447953407704813750}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _onMapDeselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3447953407704813750}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3447953408495174692
 GameObject:
   m_ObjectHideFlags: 0

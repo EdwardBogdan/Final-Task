@@ -55,10 +55,5 @@ namespace InventorySystem
                 else I._selectedItem = null;
             }
         }
-
-        private void OnEnable()
-        {
-            SelectItem(0);
-        }
     }
 }

@@ -16,6 +16,9 @@ MonoBehaviour:
   _itemController: {fileID: 11400000, guid: b5c61da0c3d3c2d498378ee80a2e3e4c, type: 2}
   items:
   - {fileID: 11400000, guid: b4235f05e1809fb4885c2531375e0098, type: 2}
+  - {fileID: 11400000, guid: e4d0b66fdaa429842bc1dd7055380d7b, type: 2}
+  - {fileID: 11400000, guid: cc54a943e40649a43a062cc644d59ae4, type: 2}
+  - {fileID: 11400000, guid: ac5254336a5680e46a4ff19fd006b632, type: 2}
   events:
     OnUnitAdded:
       m_PersistentCalls:

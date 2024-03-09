@@ -345,7 +345,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -951793731
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: de7a54b1419ac4c4c9dd56dc44a7916f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1042,7 +1042,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6953308382559307722}
   - component: {fileID: 8272323581848958615}
-  - component: {fileID: 6953308382559307735}
   - component: {fileID: 1651326181542789220}
   - component: {fileID: 5288796922585709290}
   - component: {fileID: 6087520727336853141}
@@ -1125,20 +1124,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6953308382559307735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6953308382559307723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0b548da7b55c449b7c2b5050f439fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _binName: '#Creature'
-  _object: {fileID: 6953308382165516333}
 --- !u!114 &1651326181542789220
 MonoBehaviour:
   m_ObjectHideFlags: 0

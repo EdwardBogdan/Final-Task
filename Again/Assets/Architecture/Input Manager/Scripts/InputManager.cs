@@ -19,7 +19,7 @@ namespace InputControll
             get => I._inputMap.Map;
             set => I._inputMap.Map = value;
         }
-        public static void ListenChangeMap(UnityAction action, bool subscribe)
+        internal static void ListenChangeMap(UnityAction<InputMap, InputMap> action, bool subscribe)
         {
             I._inputMap.ListenChangeMap(action, subscribe);
         }

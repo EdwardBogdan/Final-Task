@@ -9,7 +9,7 @@ namespace InputControll
 
         private void Awake()
         {
-            OnChangeMap();
+            OnChangeMap(InputManager.Map, default);
 
             InputManager.ListenChangeMap(OnChangeMap, true);
         }
@@ -18,9 +18,8 @@ namespace InputControll
             InputManager.ListenChangeMap(OnChangeMap, false);
         }
 
-        private void OnChangeMap()
+        private void OnChangeMap(InputMap map, InputMap oldMap)
         {
-            var map = InputManager.Map;
             string key = InputMapKeys.GetKey(map);
             _input.SwitchCurrentActionMap(key);
         }

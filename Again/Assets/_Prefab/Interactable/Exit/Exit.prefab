@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2121572319
-  m_SortingLayer: 0
+  m_SortingLayerID: 1176433391
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f2242638c68d5346a3f0774d94cd92d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,7 +109,7 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls: []
-  - _name: Open Start
+  - _name: Open
     _loop: 0
     sprites:
     - {fileID: 21300000, guid: 1f2242638c68d5346a3f0774d94cd92d, type: 3}
@@ -119,9 +119,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 5138289194628735427}
-          m_TargetAssemblyTypeName: UI.Windows.SceneTransition.SceneTransitionController,
-            Assembly-CSharp
-          m_MethodName: TransitionScene
+          m_TargetAssemblyTypeName: GameSystem.SceneManagment.SceneChanger, Assembly-CSharp
+          m_MethodName: ChangeScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -131,27 +130,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 4433495075504810542}
-          m_TargetAssemblyTypeName: ScriptAnimation.ScriptSmartAnimator, Assembly-CSharp
-          m_MethodName: SetClip
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Open Finish
-            m_BoolArgument: 0
-          m_CallState: 2
-  - _name: Open Finish
-    _loop: 0
-    sprites:
-    - {fileID: 21300000, guid: 8ab50265fddab0547b3631df16de30b9, type: 3}
-    - {fileID: 21300000, guid: 1fe8d1d44dd0d9c4d959127b8e6ab1ba, type: 3}
-    - {fileID: 21300000, guid: f25a65e5c2a5e994a98bb9e34b9836bb, type: 3}
-    _onComplete:
-      m_PersistentCalls:
-        m_Calls: []
   - _name: Close
     _loop: 0
     sprites:
@@ -201,6 +179,7 @@ GameObject:
   - component: {fileID: 591319093651356453}
   - component: {fileID: 5138289194628735427}
   - component: {fileID: 6468566359520008539}
+  - component: {fileID: 2742195813934503172}
   m_Layer: 9
   m_Name: Interactable
   m_TagString: Untagged
@@ -261,14 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ecfca7342ec9f4084f1dcb8b37ec31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _windowName: Window Scene Transition
-  _sceneName: Test
-  _beforeChangeScene:
-    m_PersistentCalls:
-      m_Calls: []
-  _panel1: {r: 1, g: 0.6903944, b: 0, a: 1}
-  _panel2: {r: 0.47685468, g: 1, b: 0, a: 1}
-  _text: {r: 1, g: 0, b: 0, a: 1}
+  _config: {fileID: 11400000, guid: 794aaf59821f4ad448ed29e48ec74f04, type: 2}
 --- !u!114 &6468566359520008539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,9 +278,35 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Open Start
+          m_StringArgument: Open
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2742195813934503172}
+        m_TargetAssemblyTypeName: InputControll.InputWidget, Assembly-CSharp
+        m_MethodName: ChangeInputMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2742195813934503172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843612964001336362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b4ab178ee752c47aeacd5ca5e7d9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: 0
+  _oldMap: 0
 --- !u!1 &7673560446074720436
 GameObject:
   m_ObjectHideFlags: 0

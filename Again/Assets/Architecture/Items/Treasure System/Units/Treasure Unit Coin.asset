@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 632ece01e173f524a80be9656551edc4, type: 3}
   _count:
-    _value: 0
-    _stored: 0
+    _value: 27
+    _stored: 27
     OnCountChanged:
       m_PersistentCalls:
         m_Calls: []
