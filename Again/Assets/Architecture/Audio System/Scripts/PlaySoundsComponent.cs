@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GameSystem.Audio
+namespace DeepSystem.Audio.Components
 {
     public class PlaySoundsComponent : MonoBehaviour
     {

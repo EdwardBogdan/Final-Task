@@ -6,7 +6,10 @@ namespace SpawnSystem.Components
 {
     public class SpawnManager : MonoBehaviour
     {
-        [SerializeField] SpawnData[] _objects;
+#if UNITY_EDITOR
+        [SerializeField] private bool _debug = false;
+#endif
+        [SerializeField] private SpawnData[] _objects;
 
         private Dictionary<string, SpawnPoint> _spawnDictionary;
 
@@ -26,10 +29,19 @@ namespace SpawnSystem.Components
         {
             if (_spawnDictionary.TryGetValue(name, out SpawnPoint spawnPoint))
             {
-                return spawnPoint.GetSpawnedObject();
+                if (spawnPoint.gameObject.activeSelf == true)
+                {
+                    return spawnPoint.GetSpawnedObject();
+                }
+#if UNITY_EDITOR
+                if (_debug) Debug.Log($"{name} - not active");
+#endif
+                return null;
+                
             }
-
-            Debug.Log($"{name} - not found");
+#if UNITY_EDITOR
+            if(_debug) Debug.Log($"{name} - not found");
+#endif
             return null;
         }
 

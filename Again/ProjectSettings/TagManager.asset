@@ -20,9 +20,9 @@ TagManager:
   - Creature
   - Interactable
   - Player
-  - 
-  - 
-  - 
+  - Item
+  - Background
+  - Projectile
   - 
   - 
   - 

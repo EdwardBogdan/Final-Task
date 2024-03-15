@@ -1,8 +1,8 @@
 using System;
-using GameSystem.General;
-using GameSystem.SaveSystem;
+using DeepSystem.General;
+using DeepSystem.SaveSystem;
 
-namespace GameSystem.Main
+namespace DeepSystem.Main
 {
     public class SystemManager : SingletonSaveSystem<SystemManager>
     {

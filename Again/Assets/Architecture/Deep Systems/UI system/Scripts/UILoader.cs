@@ -1,11 +1,11 @@
-using GameSystem.General;
+using DeepSystem.General;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace GameSystem.Overlay
+namespace DeepSystem.Overlay
 {
     [CreateAssetMenu(menuName = "UI/Loader", fileName = "UILoader")]
     public class UILoader : SystemOrigin<UILoader>

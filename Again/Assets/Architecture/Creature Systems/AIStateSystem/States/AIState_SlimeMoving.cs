@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using Property.TimeProperty;
 using ColliderTouchSystem.Touch;
-using PhysicModuleSystem2D;
 
 namespace AIStateSystem.States
 {
@@ -11,7 +10,6 @@ namespace AIStateSystem.States
         [SerializeField] private Cooldown _waitTimeToChange;
 
         [SerializeField] private ColliderTouchKeeper _areaWall;
-        [SerializeField] private PMController2D _physicController;
         
         private Vector3 direction;
 
@@ -31,7 +29,7 @@ namespace AIStateSystem.States
                     _waitTimeToChange.Reset();
                 }
 
-                _physicController.SetDirection(direction);
+                machine.SetPhysicDirection(this, direction);
 
                 yield return new WaitForEndOfFrame();
             }

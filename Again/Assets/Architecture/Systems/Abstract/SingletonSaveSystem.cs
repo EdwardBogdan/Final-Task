@@ -1,4 +1,4 @@
-namespace GameSystem.General
+namespace DeepSystem.General
 {
     public abstract class SingletonSaveSystem<T> : SingletonSystem<T> where T : SingletonSaveSystem<T>
     {

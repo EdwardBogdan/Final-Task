@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace GameSystem.General.Editors
+namespace DeepSystem.General.Editors
 {
     [CustomEditor(typeof(ScriptableObjectLink))]
     public class ScriptableObjectLinkEditor : Editor 

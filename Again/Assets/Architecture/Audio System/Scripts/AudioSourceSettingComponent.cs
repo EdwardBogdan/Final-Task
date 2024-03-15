@@ -1,7 +1,6 @@
-using GameSystem.Audio.Property;
 using UnityEngine;
 
-namespace GameSystem.Audio.Components
+namespace DeepSystem.Audio.Components
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioSourceSettingComponent : MonoBehaviour

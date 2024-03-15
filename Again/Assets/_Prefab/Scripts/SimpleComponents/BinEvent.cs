@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace SimpleComponents
 {
-    public class ActionMasComponent : MonoBehaviour
+    public class BinEvent : MonoBehaviour
     {
         [SerializeField] private UnityEvent _action;
 

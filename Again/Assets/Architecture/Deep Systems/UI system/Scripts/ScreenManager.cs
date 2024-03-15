@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Property.ObservableProperty;
 
-namespace GameSystem.Overlay
+namespace DeepSystem.Overlay
 {
     public class ScreenManager : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameSystem.SceneManagment
+namespace DeepSystem.SceneManagment
 {
     [CreateAssetMenu(menuName = "SceneManagment/Confing", fileName = "SceneConfig")]
     public class SceneConfig : ScriptableObject

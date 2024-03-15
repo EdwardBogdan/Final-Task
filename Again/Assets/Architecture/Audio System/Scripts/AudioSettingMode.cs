@@ -1,4 +1,4 @@
-namespace GameSystem.Audio
+namespace DeepSystem.Audio
 {
     internal enum AudioSettingMode
     {

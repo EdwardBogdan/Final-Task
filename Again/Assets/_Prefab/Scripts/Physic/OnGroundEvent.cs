@@ -11,6 +11,10 @@ namespace PhysicCustom.Components
 
         private float SavedVelocity = 0;
 
+        public void OnFly()
+        {
+            enabled = true;
+        }
         public void OnGround()
         {
             enabled = false;
@@ -23,6 +27,7 @@ namespace PhysicCustom.Components
                 }
             }
         }
+
 
         private void FixedUpdate()
         {

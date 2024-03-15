@@ -1,6 +1,6 @@
 using UnityEngine;
 using Creature.Player.PlayerInit;
-using GameSystem.Overlay;
+using DeepSystem.Overlay;
 
 namespace UI.Hud.Inventory
 {

@@ -12,7 +12,8 @@ namespace AIStateSystem.States
 
         [SerializeField] private ColliderTouchKeeper _chaseArea;
 
-        [SerializeField] private UnityEvent _lostEvent;
+        [SerializeField] private UnityEvent _firstLostEvent;
+        [SerializeField] private UnityEvent _secondLostEvent;
 
         [Header("Exits")]
         [SerializeField] private AIState _targetIsDetectedAgain;
@@ -20,28 +21,27 @@ namespace AIStateSystem.States
 
         public override IEnumerator StateLogic(AIStateMachine machine)
         {
-            if (machine.Target != null)
+            machine.SetPhysicDirection(this, Vector2.zero);
+
+            if (_lostTargetDelay.IsReady)
             {
-                machine.SetPhysicDirection(this, Vector2.zero);
-
-                if (_lostTargetDelay.IsReady)
-                {
-                    _lostEvent?.Invoke();
-                } 
-
-                _lostTargetDelay.Reset();
-
-                while (!_lostTargetDelay.IsReady)
-                {
-                    if (_chaseArea.IsTouched && machine.VisionRay)
-                    {
-                        machine.StartState(_targetIsDetectedAgain);
-                    }
-                    yield return new WaitForEndOfFrame();
-                }
+                _firstLostEvent?.Invoke();
             }
 
-            machine.SetTarget(null);
+            _lostTargetDelay.Reset();
+
+            while (!_lostTargetDelay.IsReady)
+            {
+                if (_chaseArea.IsTouched && machine.VisualContact)
+                {
+                    machine.StartState(_targetIsDetectedAgain);
+                }
+                yield return new WaitForEndOfFrame();
+            }
+
+            _secondLostEvent?.Invoke();
+
+            machine.DropTarget();
             machine.StartState(_targetLost);
         }
     }

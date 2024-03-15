@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GameSystem.Overlay
+namespace DeepSystem.Overlay
 {
     public abstract class UnitUI : MonoBehaviour
     {

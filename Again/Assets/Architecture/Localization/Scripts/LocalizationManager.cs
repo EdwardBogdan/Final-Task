@@ -1,5 +1,5 @@
 using UnityEngine;
-using GameSystem.General;
+using DeepSystem.General;
 
 namespace Localization
 {

@@ -8,7 +8,7 @@ namespace AIStateSystem.States
     {
         [SerializeField, Min(0.1f)] private float _checkInterval = 0.1f;
 
-        [SerializeField] private float _treshold = 0.1f;
+        [SerializeField] private float _treshold = 0.5f;
 
         [Header("Exits")]
         [SerializeField] private AIState _targetIsDetected;
@@ -30,7 +30,7 @@ namespace AIStateSystem.States
 
             while (true)
             {
-                if (machine.VisionRay)
+                if (machine.VisualContact)
                 {
                     machine.StartState(_targetIsDetected);
                     break;

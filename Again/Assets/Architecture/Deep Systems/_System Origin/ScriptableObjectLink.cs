@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameSystem.General
+namespace DeepSystem.General
 {
     public class ScriptableObjectLink : MonoBehaviour
     {

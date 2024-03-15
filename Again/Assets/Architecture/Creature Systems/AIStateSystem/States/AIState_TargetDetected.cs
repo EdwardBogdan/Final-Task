@@ -28,7 +28,7 @@ namespace AIStateSystem.States
 
             yield return new WaitForSeconds(_changeStateDelay);
 
-            if (machine.VisionRay)
+            if (machine.VisualContact)
             {
                 machine.StartState(_targetStillDetected);
             }

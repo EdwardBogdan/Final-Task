@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameSystem.Audio.Property
+namespace DeepSystem.Audio
 {
     [Serializable]
     public class AudioFloatProperty

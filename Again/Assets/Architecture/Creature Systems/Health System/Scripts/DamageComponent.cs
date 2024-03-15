@@ -11,7 +11,7 @@ namespace HealthSystem
 
         public void OnDealDamage(GameObject go)
         {
-            if (!go.TryGetComponent(out IHealth healthComponent)) return;
+            if (go == null | !go.TryGetComponent(out IHealth healthComponent)) return;
 
             if (!healthComponent.ReadyForDamage) return;
 

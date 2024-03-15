@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6499864992516460201}
   - component: {fileID: 5101828392839915893}
+  - component: {fileID: 7984064469089462825}
   - component: {fileID: 6938087171669865094}
-  - component: {fileID: 7280778064850950416}
   - component: {fileID: 1801109284587632807}
   m_Layer: 0
   m_Name: Smoke Effect
@@ -4751,6 +4751,35 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &7984064469089462825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344749687658467804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52c4c32431e09a4fba9f0c733ef2ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delay: 4
+  _event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1801109284587632807}
+        m_TargetAssemblyTypeName: DestroySystem.Components.DestroyObjectComponent,
+          Assembly-CSharp
+        m_MethodName: DestroyObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!199 &6938087171669865094
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4823,36 +4852,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7280778064850950416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8344749687658467804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aef70f7c0dd99941978a92491c0ee60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delay:
-    _duration: 2.5
-  _action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1801109284587632807}
-        m_TargetAssemblyTypeName: DestroySystem.Components.DestroyObjectComponent,
-          Assembly-CSharp
-        m_MethodName: DestroyObjects
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1801109284587632807
 MonoBehaviour:
   m_ObjectHideFlags: 0

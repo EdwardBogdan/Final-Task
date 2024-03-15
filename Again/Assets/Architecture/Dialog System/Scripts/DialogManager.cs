@@ -2,7 +2,7 @@ using DialogSystem.Data;
 using DialogSystem.Face;
 using DialogSystem.Side;
 using DialogSystem.Text;
-using GameSystem.General;
+using DeepSystem.General;
 using Localization;
 using System;
 using UnityEngine;

@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace GameSystem.General
+namespace DeepSystem.General
 {
     public abstract class SingletonSystem<T> : MonoBehaviour where T : SingletonSystem<T>
     {

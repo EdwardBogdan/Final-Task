@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace GameSystem.SceneManagment
+namespace DeepSystem.SceneManagment
 {
     public class InitSceneLoader : MonoBehaviour
     {

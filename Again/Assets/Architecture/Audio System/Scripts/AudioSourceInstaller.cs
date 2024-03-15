@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameSystem.Audio.Components
+namespace DeepSystem.Audio.Components
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioSourceInstaller : MonoBehaviour
@@ -12,6 +12,8 @@ namespace GameSystem.Audio.Components
             AudioSource source = GetComponent<AudioSource>();
 
             AudioManager.InstallAudioSource(_mode, source);
+
+            Destroy(this);
         }
     }
 }

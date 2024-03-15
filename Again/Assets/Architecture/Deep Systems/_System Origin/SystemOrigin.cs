@@ -1,8 +1,8 @@
-using GameSystem.Initialization;
+using DeepSystem.Initialization;
 using UnityEditor;
 using UnityEngine;
 
-namespace GameSystem.General
+namespace DeepSystem.General
 {
     public abstract class SystemOrigin<T> : ScriptableObject where T : SystemOrigin<T>
     {

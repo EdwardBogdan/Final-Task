@@ -6,7 +6,9 @@ namespace PhysicModuleSystem2D.Modules
     {
         [SerializeField] private float _acceleration;
         [SerializeField] private float _deAcceleration;
-        [SerializeField] private float _speedClamp;
+        [SerializeField,Min(0)] private float _speedClamp;
+
+        public float Acceleration => _acceleration;
 
         protected override void Modification(Rigidbody2D body, Vector2 direction)
         {
@@ -21,5 +23,21 @@ namespace PhysicModuleSystem2D.Modules
             currentHorizontalSpeed = Mathf.Clamp(currentHorizontalSpeed, -_speedClamp, _speedClamp);
             body.velocity = new(currentHorizontalSpeed, body.velocity.y);
         }
+
+        public void SetAcceleration(float value)
+        {
+            _acceleration = value;
+        }
+        public void SetDeacceleration(float value)
+        {
+            _deAcceleration = value;
+        }
+        public void SetSpeedMax(float value)
+        {
+            _speedClamp = value;
+            _speedClamp = Mathf.Clamp(_speedClamp, 0, float.PositiveInfinity);
+        }
+
+        
     }
 }

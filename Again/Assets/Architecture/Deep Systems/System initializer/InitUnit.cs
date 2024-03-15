@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GameSystem.Initialization
+namespace DeepSystem.Initialization
 {
     internal class InitUnit
     {

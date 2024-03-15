@@ -1,23 +1,23 @@
 using Coroutines;
-using GameSystem.General;
+using DeepSystem.General;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace GameSystem.SceneManagment
+namespace DeepSystem.SceneManagment
 {
     [CreateAssetMenu(menuName = "SceneManagment/Manager", fileName = "SceneManager")]
     public class GameSceneManager : SystemOrigin<GameSceneManager>
     {
         private const string LoadingSceneName = "_Loading Scene";
 
-        [SerializeField] private UnityEvent<SceneConfig> _onStartLoad;
-        [SerializeField] private UnityEvent<SceneConfig> _onFinishLoad;
+        [SerializeField] private UnityEvent<SceneConfig, LoadingType> _beforeStartLoad;
+        [SerializeField] private UnityEvent<SceneConfig, LoadingType> _onFinishLoad;
 
         public static SceneConfig Config { get; private set; }
 
-        public static void LoadScene(SceneConfig config)
+        public static void LoadScene(SceneConfig config, LoadingType type)
         {
             CoroutineRunner.StartCoroutine(Loading(config));
 
@@ -27,7 +27,7 @@ namespace GameSystem.SceneManagment
 
                 Config = config;
 
-                I._onStartLoad?.Invoke(config);
+                I._beforeStartLoad?.Invoke(config, type);
 
                 SceneManager.LoadScene(LoadingSceneName);
 
@@ -39,7 +39,7 @@ namespace GameSystem.SceneManagment
 
                 async.completed += op =>
                 {
-                    I._onFinishLoad?.Invoke(conf);
+                    I._onFinishLoad?.Invoke(conf, type);
                 };
 
                 yield return new WaitForSeconds(minLoadingInterval);
@@ -48,12 +48,12 @@ namespace GameSystem.SceneManagment
             }
         }
 
-        public static void ListenStart(UnityAction<SceneConfig> func, bool mode = true)
+        public static void ListenStart(UnityAction<SceneConfig, LoadingType> func, bool mode = true)
         {
-            if (mode) I._onStartLoad.AddListener(func);
-            else I._onStartLoad.RemoveListener(func);
+            if (mode) I._beforeStartLoad.AddListener(func);
+            else I._beforeStartLoad.RemoveListener(func);
         }
-        public static void ListenFinish(UnityAction<SceneConfig> func, bool mode = true)
+        public static void ListenFinish(UnityAction<SceneConfig, LoadingType> func, bool mode = true)
         {
             if (mode) I._onFinishLoad.AddListener(func);
             else I._onFinishLoad.RemoveListener(func);

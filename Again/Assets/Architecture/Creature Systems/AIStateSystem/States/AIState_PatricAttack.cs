@@ -1,5 +1,4 @@
-using PhysicModuleSystem2D;
-using Property.TimeProperty;
+using PhysicModuleSystem2D.Modules;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,48 +7,35 @@ namespace AIStateSystem.States
 {
     public class AIState_PatricAttack : AIState
     {
-        [SerializeField, Min(0.1f)] private float _attakcDuration;
-
-        [SerializeField, Min(0.1f)] private float _restDuration;
-
-        [SerializeField] private Cooldown _attackCD;
-
-        [SerializeField] private PMController2D _physic;
-
+        [SerializeField, Min(0)] private float _baseAcceleration;
+        [SerializeField, Min(0)] private float _lowZeroMod;
+        [SerializeField, Min(0.0001f)] private float _increaseInterval;
+        [SerializeField] private PMMoving2D _pM;
         [SerializeField] private UnityEvent _beforeAttack;
-        [SerializeField] private UnityEvent _attack;
-        [SerializeField] private UnityEvent _afterAttack;
-
-        [Header("Exits")]
-        [SerializeField] private AIState _attackFinished;
 
         public override IEnumerator StateLogic(AIStateMachine machine)
         {
-            float time = Time.time + _attakcDuration;
-
-            _attackCD.Reset();
-
             _beforeAttack.Invoke();
 
-            _physic.SetDirection(machine.DirectionToTarget);
+            _pM.SetAcceleration(_baseAcceleration);
 
-            while (Time.time <= time)
+            machine.SetPhysicDirection(this, machine.DirectionToTarget);
+
+            while (true)
             {
-                if (_attackCD.IsReady)
+                float x = _pM.Acceleration;
+
+                if (x > 1)
                 {
-                    _attackCD.Reset();
-                    _attack.Invoke();
+                    _pM.SetAcceleration(x * x);
+                }
+                else
+                {
+                    _pM.SetAcceleration(x * _lowZeroMod);
                 }
 
-                yield return new WaitForFixedUpdate();
+                yield return new WaitForSeconds(_increaseInterval);
             }
-            _afterAttack.Invoke();
-
-            _physic.SetDirection(Vector2.zero);
-
-            yield return new WaitForSeconds(_restDuration);
-
-            machine.StartState(_attackFinished);
         }
     }
 }

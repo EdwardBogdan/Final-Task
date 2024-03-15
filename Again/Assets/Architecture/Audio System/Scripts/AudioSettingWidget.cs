@@ -1,8 +1,7 @@
-using GameSystem.Audio.Property;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameSystem.Audio.Components
+namespace DeepSystem.Audio.Components
 {
     public class AudioSettingWidget : MonoBehaviour
     {

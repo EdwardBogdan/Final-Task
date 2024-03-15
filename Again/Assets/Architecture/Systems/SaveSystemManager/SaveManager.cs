@@ -1,7 +1,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace GameSystem.SaveSystem
+namespace DeepSystem.SaveSystem
 {
     public static class SaveManager
     {

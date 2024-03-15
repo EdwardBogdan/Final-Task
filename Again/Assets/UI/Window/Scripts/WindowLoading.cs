@@ -1,7 +1,7 @@
-using GameSystem.SceneManagment;
+using DeepSystem.SceneManagment;
 using Localization;
 using TMPro;
-using GameSystem.Overlay;
+using DeepSystem.Overlay;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +26,7 @@ namespace UI.Windows.SceneTransition
             GameSceneManager.ListenFinish(OnFinish);
         }
 
-        private void OnFinish(SceneConfig config)
+        private void OnFinish(SceneConfig config, LoadingType type)
         {
             GameSceneManager.ListenFinish(OnFinish, false);
 

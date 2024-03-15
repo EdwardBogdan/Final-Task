@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkPrefab: {fileID: 1819656952676795520, guid: d54aa9a86e52fee40856d8d67f2866db, type: 3}
   _language:
-    _value: 1
-    _stored: 1
-    _localeDef: {fileID: 11400000, guid: 9f3f3f4fbde47d84d80d8aa6b23625cc, type: 2}
+    _value: 0
+    _stored: 0
+    _localeDef: {fileID: 11400000, guid: d44d203e57f40994589b3d9c33089c80, type: 2}
     OnChanged:
       m_PersistentCalls:
         m_Calls: []

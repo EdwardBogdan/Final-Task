@@ -5,11 +5,12 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using System;
 
-namespace GameSystem.Initialization
+namespace DeepSystem.Initialization
 {
     public class SystemInitializer : MonoBehaviour
     {
         [SerializeField] private UnityEvent OnDone;
+        public static event Action OnSystemsInitialized;
 
         private static readonly List<InitUnit> queue = new();
 
@@ -66,6 +67,8 @@ namespace GameSystem.Initialization
             }
             else
             {
+                OnSystemsInitialized?.Invoke();
+                OnSystemsInitialized = null;
                 OnDone?.Invoke();
             }
         }

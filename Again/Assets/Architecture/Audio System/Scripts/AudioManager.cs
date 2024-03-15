@@ -1,8 +1,7 @@
-using GameSystem.Audio.Property;
-using GameSystem.General;
+using DeepSystem.General;
 using UnityEngine;
 
-namespace GameSystem.Audio
+namespace DeepSystem.Audio
 {
     [CreateAssetMenu(fileName = "AudioManager", menuName = "Audio/Manager")]
     public class AudioManager : SystemOrigin<AudioManager>

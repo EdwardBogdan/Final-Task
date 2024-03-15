@@ -1,6 +1,6 @@
 using DialogSystem;
 using DialogSystem.Side;
-using GameSystem.Overlay;
+using DeepSystem.Overlay;
 using UnityEngine;
 
 namespace UI.Dialog

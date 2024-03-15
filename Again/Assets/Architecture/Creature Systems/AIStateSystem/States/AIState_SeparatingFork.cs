@@ -25,7 +25,7 @@ namespace AIStateSystem.States
 
             if (_moveToTarget) stateLogic += Move;
 
-            while (_chaseArea.IsTouched && machine.VisionRay)
+            while (_chaseArea.IsTouched && machine.VisualContact)
             {
                 stateLogic.Invoke(machine);
 

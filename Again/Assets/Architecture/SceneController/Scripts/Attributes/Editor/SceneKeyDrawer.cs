@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace GameSystem.SceneManagment.Editors
+namespace DeepSystem.SceneManagment.Editors
 {
     [CustomPropertyDrawer(typeof(SceneKeyAttribute))]
     public class SceneKeyDrawer : PropertyDrawer

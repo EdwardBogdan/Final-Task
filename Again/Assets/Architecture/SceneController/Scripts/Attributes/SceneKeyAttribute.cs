@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GameSystem.SceneManagment
+namespace DeepSystem.SceneManagment
 {
     [AttributeUsage(AttributeTargets.Field)]
     public class SceneKeyAttribute : PropertyAttribute

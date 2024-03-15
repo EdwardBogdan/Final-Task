@@ -7,6 +7,7 @@ namespace AIStateSystem.States
 {
     public class AIState_AreaTrigger : AIState
     {
+        [SerializeField, Min(0)] private float _startDelay;
         [SerializeField, Min(0.1f)] private float _eventInterval;
         
         [SerializeField] private ColliderTouchKeeper _area;
@@ -18,6 +19,8 @@ namespace AIStateSystem.States
 
         public override IEnumerator StateLogic(AIStateMachine machine)
         {
+            yield return new WaitForSeconds(_startDelay);
+
             while (_area.IsTouched)
             {
                 machine.SetPhysicDirection(this, Vector2.zero);

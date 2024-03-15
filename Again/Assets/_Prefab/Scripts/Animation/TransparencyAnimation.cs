@@ -77,5 +77,15 @@ namespace ScriptAnimation
             if (_currentAlpha == MaxAlpha) _onShowFinish?.Invoke();
             else if (_currentAlpha == MinAlpha) _onHideFinish?.Invoke();
         }
+
+        private void Awake()
+        {
+            foreach (var renderer in _renderers)
+            {
+                Color color = renderer.color;
+                color.a = _currentAlpha;
+                renderer.color = color;
+            }
+        }
     }
 }

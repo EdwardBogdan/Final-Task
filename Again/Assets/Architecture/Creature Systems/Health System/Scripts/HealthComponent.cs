@@ -6,6 +6,17 @@ namespace HealthSystem
 {
     public class HealthComponent : MonoBehaviour, IHealth
     {
+        #region Immortal
+        [SerializeField] private bool _immortal;
+        [SerializeField] private Cooldown _immunityCd;
+        public bool ReadyForDamage => _immunityCd.IsReady;
+
+        public void SetImmortal(bool value)
+        {
+            _immortal = value;
+        }
+        #endregion
+
         [SerializeField] private HealthProperty _health;
         public HealthProperty Health => _health;
 
@@ -21,17 +32,15 @@ namespace HealthSystem
 
             _health.ApplyDamage(damage);
         }
-
-        #region Immortal
-        [SerializeField] private bool _immortal;
-        [SerializeField] private Cooldown _immunityCd;
-        public bool ReadyForDamage => _immunityCd.IsReady;
-
-        public void SetImmortal(bool value)
+        public void SetHealth(int value)
         {
-            _immortal = value;
+            if (value <= 0)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            _health.Value = value;
         }
-        #endregion
 
         #region Mono
         private void Start()
