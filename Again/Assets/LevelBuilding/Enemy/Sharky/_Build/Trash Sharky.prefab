@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash Sharky
       objectReference: {fileID: 0}
+    - target: {fileID: 3541073086317621124, guid: d2a879616a018d846ac57c31bf9b1cdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541073086317621132, guid: d2a879616a018d846ac57c31bf9b1cdc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7474202736202761082, guid: d2a879616a018d846ac57c31bf9b1cdc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -73,6 +81,10 @@ PrefabInstance:
     - target: {fileID: 5680321371483436401, guid: 2520a4393dc390a4184e93c533027646, type: 3}
       propertyPath: m_Name
       value: Trash Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680321371483436401, guid: 2520a4393dc390a4184e93c533027646, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5680321371483436405, guid: 2520a4393dc390a4184e93c533027646, type: 3}
       propertyPath: _clips.Array.data[0].sprites.Array.size

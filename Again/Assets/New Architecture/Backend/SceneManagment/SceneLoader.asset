@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370d10c76fce74e4bb81997b880a612f, type: 3}
+  m_Name: SceneLoader
+  m_EditorClassIdentifier: 
+  linkPrefab: {fileID: 2169806038257533745, guid: 127085b408f32e84abf68075433263cb, type: 3}
+  _editorDefaultLoadingScene: {fileID: 11400000, guid: 794aaf59821f4ad448ed29e48ec74f04, type: 2}
+  _config:
+    _value: {fileID: 0}
+    _stored: {fileID: 11400000, guid: 98961f20b8c5e114282ab3a547b796db, type: 2}
+    _onConfigChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  _onBeforeStartLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAfterFinishLoad:
+    m_PersistentCalls:
+      m_Calls: []

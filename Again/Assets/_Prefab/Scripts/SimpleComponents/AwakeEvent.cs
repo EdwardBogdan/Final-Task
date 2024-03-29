@@ -10,6 +10,7 @@ namespace SimpleComponents
         private void Awake()
         {
             _action?.Invoke();
+            Destroy(this);
         }
     }
 }

@@ -189,7 +189,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -876,6 +876,30 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 5288796922585709290}
+          m_TargetAssemblyTypeName: InputControll.InputWidget, Assembly-CSharp
+          m_MethodName: ReturnInputMap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+          m_TargetAssemblyTypeName: DeepSystem.UI.UIController, Assembly-CSharp
+          m_MethodName: OpenUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 5228076584406956432, guid: 6b18c2869a10d0648a5b04f372d24532, type: 3}
+            m_ObjectArgumentAssemblyTypeName: DeepSystem.UI.UnitUI, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1651326181542789220}
           m_TargetAssemblyTypeName: DestroySystem.Components.DestroyObjectComponent,
             Assembly-CSharp
@@ -1121,6 +1145,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: OpenUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 226625676010318113, guid: 97ce4d19fbf1304478f4e446b1279626, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: OpenUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3134610202943085, guid: efce07bf55cb3ef429b799a01756a7cf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: OpenUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3594015099634682282, guid: bc271e6f90c6479429609568c8a85724, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onDestroyed:
     m_PersistentCalls:
       m_Calls:
@@ -1132,6 +1192,42 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: CloseUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 226625676010318113, guid: 97ce4d19fbf1304478f4e446b1279626, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: CloseUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3134610202943085, guid: efce07bf55cb3ef429b799a01756a7cf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b0f48e1b4d6704140b017eb7d91bc79a, type: 2}
+        m_TargetAssemblyTypeName: Overlay.UIManagment.UIController, Assembly-CSharp
+        m_MethodName: CloseUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3594015099634682282, guid: bc271e6f90c6479429609568c8a85724, type: 3}
+          m_ObjectArgumentAssemblyTypeName: Overlay.UIManagment.UnitUI, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

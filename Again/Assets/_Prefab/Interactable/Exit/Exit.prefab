@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1176433391
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 1f2242638c68d5346a3f0774d94cd92d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ecfca7342ec9f4084f1dcb8b37ec31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 2
   _config: {fileID: 11400000, guid: 794aaf59821f4ad448ed29e48ec74f04, type: 2}
 --- !u!114 &6468566359520008539
 MonoBehaviour:
@@ -293,6 +294,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 3e7c87ae71056764cb2f9ec4f6d504a3, type: 2}
+        m_TargetAssemblyTypeName: SpawnSystem.SpawnManager, Assembly-CSharp
+        m_MethodName: ChangeSpawnPoint
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2742195813934503172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +329,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3881137133256620121}
+  - component: {fileID: 925628767673714337}
+  - component: {fileID: 4323853332012655075}
   m_Layer: 0
   m_Name: Spawn pos
   m_TagString: Untagged
@@ -338,3 +353,29 @@ Transform:
   m_Father: {fileID: 4433495075504810536}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925628767673714337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673560446074720436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d43dcb0e441aa743952c1a34d17abc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: 
+--- !u!114 &4323853332012655075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673560446074720436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6fb99739bccce45b279f5a1501b0b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: {fileID: 925628767673714337}

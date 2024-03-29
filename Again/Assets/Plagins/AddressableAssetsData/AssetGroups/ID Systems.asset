@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 9e72f96c510ec9a4e82bdda370b7bdcd
   m_SerializeEntries:
-  - m_GUID: fe55b8d467c9ab9459acaf892d1c5fdf
-    m_Address: SaveManager
+  - m_GUID: 3e7c87ae71056764cb2f9ec4f6d504a3
+    m_Address: SpawnManager
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
